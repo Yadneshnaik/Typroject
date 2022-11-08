@@ -4,6 +4,12 @@ import MasterLayout from "./layouts/admin/MasterLayout";
 import Home from "./components/frontend/Home";
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
+import axios from 'axios';
+
+axios.defaults.baseURL = "http://127.0.0.1:8000";
+axios.defaults.headers.post['content-Type'] = 'application/json';
+axios.defaults.headers.post['Accept'] = 'application/json';
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
